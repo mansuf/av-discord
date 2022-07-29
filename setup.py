@@ -37,6 +37,14 @@ requirements = []
 with open('./requirements.txt', 'r') as r:
   requirements = r.read().splitlines()
 
+requirements_docs = []
+with open('./requirements-docs.txt', 'r') as r:
+  requirements_docs = r.read().splitlines()
+
+extras_require = {
+  'docs': requirements_docs
+}
+
 packages = find_packages('.')
 
 setup(
@@ -52,6 +60,7 @@ setup(
   url = 'https://github.com/mansuf/av-cord',  
   keywords = ['discord', 'audio'], 
   install_requires=requirements,
+  extras_require=extras_require,
   classifiers=[
     'Development Status :: 4 - Beta',  
     'Intended Audience :: Developers',

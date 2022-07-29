@@ -33,6 +33,7 @@ from discord.ext.commands import Bot
 from avcord import setup_av, AVPCMAudio, setup_encoder
 
 # Do setup
+# Use `setup_av('disnake')` if you're using disnake library
 setup_av('discord')
 
 bot = Bot()
